@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>House</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="TableCSS.css">
+    <script src="jquery-3.5.0.js"></script>
+    <script src="TableJS.js"></script>
+</head>
+<body>
+	<h1>House</h1>
+    <p id="month"></p>
+    <h2>Occupants</h2>
+<!--Occupants input fields-->
+    <p>Please enter your information below:</p>
+    <form onsubmit="return checkForm(this);">
+        <input type="text" name="firstname"  required placeholder="First Name">  <label> First Name</label><br>
+        <br>
+        <input type="text" name="firstname" required  placeholder="Last Name">  <label> Last Name</label><br>
+        <br>
+        <input type="number" name="age" required placeholder="Age">  <label> Age</label><br>
+        <br>
+        <input type="email" name="address" required  placeholder="Email Address">  <label> Email Address</label><br>
+        <br>
+        <input id="formSubmit" type="submit" name="person">
+        <br>
+    </form>
+    <br>
+	<p>This working spreadsheet can be used to calculate monthly household expenditure bills, input your costs in the cells below:</p>
+
+	<h2>Bills</h2>
+
+	<!--Create table with input fields-->
+	<table>
+         <caption>
+             Input you costs in the fields below
+            <input type="text" size="5" class="capBox" placeholder="Figures">
+         </caption>
+	<thead>
+		<tr>
+		 <th style="border-style: none"></th>
+		 <th scope="row">Date Taken</th>
+		 <th scope="col">Jan</th>
+		 <th scope="col">Feb</th>
+		 <th scope="col">Mar</th>
+		 <th scope="col">Apr</th>
+         <th scope="col">May</th>
+		 <th scope="col">Jun</th>
+		 <th scope="col">July</th>
+		 <th scope="col">Aug</th>
+		 <th scope="col">Sept</th>
+		 <th scope="col">Oct</th>
+		 <th scope="col">Nov</th>
+		 <th scope="col">Dec</th>
+		 <th scope="col">Total</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+		 <th>Mortgage Bill</th>
+		 <th>1st</th>
+	     <td><input type="text" size="1" id="td11"></td>
+         <td><input type="text" size="5" id="td12"></td>
+		 <td><input type="text" size="5" id="td13"></td>
+		 <td><input type="text" size="5" id="td14"></td>
+		 <td><input type="text" size="5" id="td15"></td>
+         <td><input type="text" size="5" id="td16"></td>
+		 <td><input type="text" size="5" id="td17"></td>
+		 <td><input type="text" size="5" id="td18"></td>
+		 <td><input type="text" size="5" id="td19"></td>
+		 <td><input type="text" size="5" id="td110"></td>
+		 <td><input type="text" size="5" id="td111"></td>
+         <td><input type="text" size="5" id="td112"></td>
+         <th>£<input type="text" size="5" id="td113"></th>
+		</tr>
+		
+		<tr>
+		 <th>Council Tax</th>
+		 <th>1st</th>
+         <td><input type="text" size="5" id="td21"></td>
+         <td><input type="text" size="5" id="td22"></td>
+		 <td><input type="text" size="5" id="td23"></td>
+		 <td><input type="text" size="5" id="td24"></td>
+		 <td><input type="text" size="5" id="td25"></td>
+         <td><input type="text" size="5" id="td26"></td>
+		 <td><input type="text" size="5" id="td27"></td>
+		 <td><input type="text" size="5" id="td28"></td>
+		 <td><input type="text" size="5" id="td29"></td>
+		 <td><input type="text" size="5" id="td210"></td>
+		 <td><input type="text" size="5" id="td211"></td>
+		 <td><input type="text" size="5" id="td212"></td>
+         <th>£<input type="text" size="5" id="td213"></th>
+		</tr>                                                     
+
+		<tr>
+		 <th>Electric Bill</th>
+		 <th>1st</th>
+	     <td><input type="text" size="5" id="td31"></td>
+         <td><input type="text" size="5" id="td32"></td>
+		 <td><input type="text" size="5" id="td33"></td>
+		 <td><input type="text" size="5" id="td34"></td>
+		 <td><input type="text" size="5" id="td35"></td>
+         <td><input type="text" size="5" id="td36"></td>
+		 <td><input type="text" size="5" id="td37"></td>
+		 <td><input type="text" size="5" id="td38"></td>
+		 <td><input type="text" size="5" id="td39"></td>
+		 <td><input type="text" size="5" id="td310"></td>
+		 <td><input type="text" size="5" id="td311"></td>
+		 <td><input type="text" size="5" id="td312"></td>
+         <th>£<input type="text" size="5" id="td313"></th>
+		</tr>
+
+		<tr>
+		 <th>Gas Bill</th>
+		 <th>1st</th>
+         <td><input type="text" size="5" id="td41"></td>
+         <td><input type="text" size="5" id="td42"></td>
+		 <td><input type="text" size="5" id="td43"></td>
+		 <td><input type="text" size="5" id="td44"></td>
+		 <td><input type="text" size="5" id="td45"></td>
+         <td><input type="text" size="5" id="td46"></td>
+		 <td><input type="text" size="5" id="td47"></td>
+		 <td><input type="text" size="5" id="td48"></td>
+		 <td><input type="text" size="5" id="td49"></td>
+		 <td><input type="text" size="5" id="td410"></td>
+		 <td><input type="text" size="5" id="td411"></td>
+		 <td><input type="text" size="5" id="td412"></td>
+         <th>£<input type="text" size="5" id="td413"></th>
+		</tr>
+
+		<tr>
+		 <th>Cable/Sky Bill</th>
+		 <th>1st</th>
+         <td><input type="text" size="5" id="td51"></td>
+         <td><input type="text" size="5" id="td52"></td>
+		 <td><input type="text" size="5" id="td53"></td>
+		 <td><input type="text" size="5" id="td54"></td>
+		 <td><input type="text" size="5" id="td55"></td>
+         <td><input type="text" size="5" id="td56"></td>
+		 <td><input type="text" size="5" id="td57"></td>
+		 <td><input type="text" size="5" id="td58"></td>
+		 <td><input type="text" size="5" id="td59"></td>
+		 <td><input type="text" size="5" id="td510"></td>
+		 <td><input type="text" size="5" id="td511"></td>
+		 <td><input type="text" size="5" id="td512"></td>
+         <th>£<input type="text" size="5" id="td513"></th>
+		</tr>
+
+		<tr>
+		 <th>Water Bill</th>
+		 <th>1st</th>
+         <td><input type="text" size="5" id="td61"></td>
+         <td><input type="text" size="5" id="td62"></td>
+		 <td><input type="text" size="5" id="td63"></td>
+		 <td><input type="text" size="5" id="td64"></td>
+		 <td><input type="text" size="5" id="td65"></td>
+         <td><input type="text" size="5" id="td66"></td>
+		 <td><input type="text" size="5" id="td67"></td>
+		 <td><input type="text" size="5" id="td68"></td>
+		 <td><input type="text" size="5" id="td69"></td>
+		 <td><input type="text" size="5" id="td610"></td>
+		 <td><input type="text" size="5" id="td611"></td>
+		 <td><input type="text" size="5" id="td612"></td>  
+         <th>£<input type="text" size="5" id="td613"></th>
+		</tr>
+	</tbody>
+
+	<tfoot>
+		<tr>
+		 <th class="total">Total</th>
+		 <th class="total"></th>
+	     <td>£<input type="text" size="5" id="tdR1" class="tdR1"></td>
+         <td>£<input type="text" size="5" id="tdR2" class="tdR2"></td>
+		 <td>£<input type="text" size="5" id="tdR3" class="tdR3"></td>
+		 <td>£<input type="text" size="5" id="tdR4" class="tdR4"></td>
+		 <td>£<input type="text" size="5" id="tdR5" class="tdR5"></td>
+         <td>£<input type="text" size="5" id="tdR6" class="tdR6"></td>
+		 <td>£<input type="text" size="5" id="tdR7" class="tdR7"></td>
+		 <td>£<input type="text" size="5" id="tdR8" class="tdR8"></td>
+		 <td>£<input type="text" size="5" id="tdR9" class="tdR9"></td>
+		 <td>£<input type="text" size="5" id="tdR10" class="tdR10"></td>
+		 <td>£<input type="text" size="5" id="tdR11" class="tdR11"></td>
+         <td>£<input type="text" size="5" id="tdR12" class="tdR12"></td>
+         <th>£<input type="text" size="5" id="tdR13" class="tdR13"></th>
+		</tr>
+	</tfoot>
+
+	</table>
+	
+    <!--Buttom to add input fields to total columns-->
+	<button type="button" id="buttonAddTable" onclick="
+	totalR1(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR2(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR3(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR4(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR5(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR6(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR7(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR8(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR9(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR10(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR11(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	totalR12(); totalR13(); C1(); C2(); C3(); C4(); C5(); C6();
+	">CLICK ME TO UPDATE THE TABLE</button>
+	<br>
+	<br>
+	</body>
+
+<!--Creates real time date-->
+<script>
+var day = new Date().getDay();
+var month = new Date().getMonth();
+var date = new Date().getUTCDate();
+var year = new Date().getUTCFullYear();
+
+switch (day) {
+	case 1:
+	day = "Monday";
+	break;
+	case 2:
+	day = "Tuesday";
+	break;
+	case 3:
+	day = "Wenesday";
+	break;
+	case 4:
+	day = "Thursday";
+	break;
+	case 5:
+	day = "Friday";
+	break;
+	case 6:
+	day = "Saturday";
+	break;
+	case 0:
+	day = "Sunday";
+}
+
+switch (month) {
+	case 0:
+	month = "January";
+	case 1:
+	month = "February";
+	break;
+	case 2:
+	month = "March";
+	break;
+	case 3:
+	month = "April";
+	break;
+	case 4:
+	month = "May";
+	break;
+	case 5:
+	month = "June";
+	break;
+	case 6:
+	month = "July";
+	break;
+	case 7:
+	month = "August";
+	break;
+	case 8:
+	month = "September";
+	break;
+	case 9:
+	month = "October";
+	break;
+	case 10:
+	month = "November";
+	break;
+	case 11:
+	month = "December";
+	break;
+}
+document.getElementById("month").innerHTML = day + " / " + date + " " + month + " / " + year;
+</script>
+
+<br>
+<footer>
+<b><u>Creator</u><br>
+<img src="giphy.gif" alt="Picture of man coding" title="Man Coding"  height="68" width="94">
+<br>Ajay Rucktooa</b>
+</footer>
+</html>
